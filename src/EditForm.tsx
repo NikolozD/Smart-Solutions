@@ -60,8 +60,6 @@ export default function EditForm({ user, submitHandler }) {
     console.log("asf");
   }
 
-  const { control } = form;
-
   return (
     <>
       <Form {...form}>
