@@ -47,41 +47,42 @@ export default function UsersPage() {
     navigate("/users", { replace: true });
   }
   return (
-    <main className="container bg-gray-200 w-full md:w-full m-auto h-[640px] p-2 align-middle rounded-lg shadow-lg">
+    <>
       {user ? (
         <>
-          <div className="container p-0 text-xl w-full h-full m-0 flex md:text-3xl flex-wrap flex-col  gap-y-1.5  gap-x-2.5">
-            <div className="flex  w-full rounded-md basis-2/12">
-              <Button onClick={handleClick} className=" bg-black basis-1/12">
-                Back
-              </Button>
-              <h1 className="font-mono  basis-10/12 font-bold text-2xl">
-                User Details
-              </h1>
-            </div>
+          <main className="container bg-gray-200 w-full h-screen md:w-full m-auto md:h-[640px] p-2 align-middle rounded-lg shadow-lg">
+            <div className="container p-0 text-xl w-full h-full m-0 flex md:text-3xl flex-wrap flex-col  gap-y-1.5  gap-x-2.5">
+              <div className="flex  w-full rounded-md basis-2/12">
+                <Button onClick={handleClick} className=" bg-black basis-1/12">
+                  Back
+                </Button>
+                <h1 className="font-mono  basis-10/12 font-bold text-2xl">
+                  User Details
+                </h1>
+              </div>
 
-            <div className="container font-mono basis-9/12  flex   p-5 h-[200px] gap-y-1 flex-col  rounded-lg ">
-              <div className="basis-5/12 flex flex-col items-start">
-                <p className="font-semibold text-left"> {user.name} </p>
-                <p className="text-left">✉️:{user.email} </p>
-                <p className="text-left"> ☎:{user.phone} </p>
-              </div>
-              <div className="basis-2/6 flex flex-col text-left items-start ">
-                <p className="font-semibold ">Address:</p>
-                <p className="text-left"> {user.address.city} </p>
-                <p className="text-left">
-                  {user.address.street}, {user.address.suite}
-                </p>
+              <div className="container font-mono basis-9/12  flex   p-5 h-[200px] gap-y-1 flex-col  rounded-lg ">
+                <div className="basis-5/12 flex flex-col items-start">
+                  <p className="font-semibold text-left"> {user.name} </p>
+                  <p className="text-left">✉️:{user.email} </p>
+                  <p className="text-left"> ☎:{user.phone} </p>
+                </div>
+                <div className="basis-2/6 flex flex-col text-left items-start ">
+                  <p className="font-semibold ">Address:</p>
+                  <p className="text-left"> {user.address.city} </p>
+                  <p className="text-left">
+                    {user.address.street}, {user.address.suite}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </main>
         </>
       ) : (
         <div>
-          <Skeleton className="h-4  w-full" />
-          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-[640px] bg-gray-300 w-[440px]" />
         </div>
       )}
-    </main>
+    </>
   );
 }

@@ -65,7 +65,7 @@ function App() {
 
   return (
     <>
-      {users ? (
+      {users.length > 1 ? (
         <>
           <UserContext.Provider value={userContext}>
             <Toaster />
@@ -98,18 +98,18 @@ function App() {
           </UserContext.Provider>{" "}
         </>
       ) : (
-        <div className="space-y-2 mt-20">
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
-          <Skeleton className="h-[40px] bg-gray-500 w-[1000px]" />
+        <div className="space-y-2 mb-15">
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
+          <Skeleton className="h-[50px] bg-gray-300 w-[950px]" />
         </div>
       )}
     </>

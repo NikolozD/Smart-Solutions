@@ -80,7 +80,7 @@ export default function EditModal({ user, index, editSate }) {
       <DialogTrigger asChild>
         <Button className="bg-black">Edit Profile</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]  bg-gray-200">
+      <DialogContent className="sm:max-w-[425px] h-vh  bg-gray-200">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
@@ -88,9 +88,9 @@ export default function EditModal({ user, index, editSate }) {
           </DialogDescription>
         </DialogHeader>
         <EditForm user={user} submitHandler={handleSubmit} />
-        <DialogFooter>
-          <DialogPrimitive.Close className=" rounded-sm  ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-            <div className="ml-3">Close</div>
+        <DialogFooter className="sm:justify-center ">
+          <DialogPrimitive.Close className=" rounded-sm align-centeer w-full  ring-offset-background transition-opacity hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            Close
           </DialogPrimitive.Close>
         </DialogFooter>
       </DialogContent>
