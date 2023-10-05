@@ -206,7 +206,6 @@ export default function EditForm({ user, submitHandler }) {
 
           <Button type="submit">Submit</Button>
         </form>
-        <DevTool control={control} />
       </Form>
     </>
   );
