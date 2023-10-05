@@ -12,7 +12,6 @@ import {
 } from "./@/components/ui/form";
 import { Input } from "./@/components/ui/input";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 
 export default function EditForm({ user, submitHandler }) {
   console.log(user);
