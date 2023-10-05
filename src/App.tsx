@@ -33,7 +33,7 @@ function App() {
     newUsers.splice(index, 1);
     setUsers(newUsers);
   };
-  const userContext: object = {
+  const userContext = {
     setUsers: setUsers,
     users: users,
     updateUserByIndex: updateUserByIndex,
