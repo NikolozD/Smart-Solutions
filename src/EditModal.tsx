@@ -80,7 +80,7 @@ export default function EditModal({ user, index, editSate }) {
       <DialogTrigger asChild>
         <Button className="bg-black">Edit Profile</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] h-vh  bg-gray-200">
+      <DialogContent className=" max-w-[425px] sm:max-w-[425px] h-3/2  bg-gray-200">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
