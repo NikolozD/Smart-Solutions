@@ -65,14 +65,14 @@ export default function EditForm({ user, submitHandler }) {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit, onError)}
-          className="space-y-8"
+          className="space-y-1"
         >
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Name
                   </FormLabel>
@@ -91,7 +91,7 @@ export default function EditForm({ user, submitHandler }) {
             name="email"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Email
                   </FormLabel>
@@ -110,7 +110,7 @@ export default function EditForm({ user, submitHandler }) {
             name="address.city"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Email
                   </FormLabel>
@@ -129,7 +129,7 @@ export default function EditForm({ user, submitHandler }) {
             name="address.street"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Street
                   </FormLabel>
@@ -148,7 +148,7 @@ export default function EditForm({ user, submitHandler }) {
             name="address.suite"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Suite
                   </FormLabel>
@@ -167,7 +167,7 @@ export default function EditForm({ user, submitHandler }) {
             name="address.zipcode"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Zipcode
                   </FormLabel>
@@ -186,7 +186,7 @@ export default function EditForm({ user, submitHandler }) {
             name="phone"
             render={({ field }) => {
               return (
-                <FormItem className="flex flex-row flex-wrap  items-center justify-between  mt-2">
+                <FormItem className="flex flex-row flex-wrap  items-center justify-between  ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
                     Phone
                   </FormLabel>
