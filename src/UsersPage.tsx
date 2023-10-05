@@ -46,6 +46,7 @@ export default function UsersPage() {
   function handleClick() {
     navigate("/users", { replace: true });
   }
+  console.log(user);
   return (
     <>
       {user ? (
