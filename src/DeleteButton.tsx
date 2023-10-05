@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,6 +13,24 @@ import {
 import { Button } from "./@/components/ui/button";
 
 export function DeleteButton({ handleDelete }) {
+  const dialogClose = () => {
+    document.getElementById("closeAlertDialog")?.click();
+  };
+  useEffect(() => {
+    const onClickOutside = (e) => {
+      console.log(e.target);
+      if (e.target.matches(".fixed.backdrop-blur-sm")) {
+        // Clicked the backdrop
+        dialogClose();
+      }
+    };
+    document.body.addEventListener("click", onClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", onClickOutside);
+    };
+  }, []);
+
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>

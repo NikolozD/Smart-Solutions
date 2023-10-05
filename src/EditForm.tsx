@@ -19,7 +19,7 @@ export default function EditForm({ user, submitHandler }) {
     name: z.string().min(2, {
       message: "Name must be at least 2 characters.",
     }),
-    email: z.string().min(2, {
+    email: z.string().email().min(2, {
       message: "Email must be at least 2 characters.",
     }),
     address: z.object({
@@ -112,7 +112,7 @@ export default function EditForm({ user, submitHandler }) {
               return (
                 <FormItem className="flex flex-row flex-wrap  items-center justify-between ">
                   <FormLabel className="font-semibold text-left align-middle mt-2 basis-1/6">
-                    Email
+                    City
                   </FormLabel>
 
                   <FormControl>
