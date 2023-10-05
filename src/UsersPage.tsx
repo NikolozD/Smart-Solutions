@@ -47,7 +47,7 @@ export default function UsersPage() {
     navigate("/users", { replace: true });
   }
   return (
-    <main className="container bg-gray-200 w-full md:w-96 m-auto h-[640px] p-2 align-middle rounded-lg shadow-lg">
+    <main className="container bg-gray-200 w-full md:w-full m-auto h-[640px] p-2 align-middle rounded-lg shadow-lg">
       {user ? (
         <>
           <div className="container p-0 text-xl w-full h-full m-0 flex md:text-3xl flex-wrap flex-col  gap-y-1.5  gap-x-2.5">
