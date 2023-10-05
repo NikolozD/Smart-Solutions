@@ -3,8 +3,32 @@ import { useNavigate, useParams } from "react-router";
 import { Skeleton } from "./@/components/ui/skeleton";
 import { Button } from "./@/components/ui/button";
 
+interface IUser {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
+}
+
 export default function UsersPage() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState<IUser>();
   const params = useParams();
   const navigate = useNavigate();
 

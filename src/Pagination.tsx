@@ -1,5 +1,5 @@
 export default function Pagination({ usersPerPage, totalUsers, paginate }) {
-  const pageNumbers = [];
+  const pageNumbers: Array<number> = [];
   for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
     pageNumbers.push(i);
   }

@@ -16,7 +16,7 @@ import { Skeleton } from "./@/components/ui/skeleton";
 import Pagination from "./Pagination";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   //   const [usersPerPage] = useState(1);
   const usersPerPage = 2;
@@ -24,7 +24,7 @@ function App() {
   const navigate = useNavigate();
 
   const updateUserByIndex = (user, index) => {
-    const newUsers = [...users];
+    const newUsers: Array<any> = [...users];
     newUsers[index] = user;
     setUsers(newUsers);
   };
@@ -33,7 +33,7 @@ function App() {
     newUsers.splice(index, 1);
     setUsers(newUsers);
   };
-  const userContext = {
+  const userContext: object = {
     setUsers: setUsers,
     users: users,
     updateUserByIndex: updateUserByIndex,
